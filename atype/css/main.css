@@ -46,46 +46,53 @@
   z-index: 1;
   background-color: rgb(0, 0, 0);
 }
-.main-visual-bg video {
+.main-visual-bg figure {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
-  opacity: 1;
+  inset: 0;
+  overflow: hidden;
+}
+.main-visual-bg figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면 꽉 채움 */
+  object-position: center; /* 중앙 기준 */
 }
 .main-visual-text {
   position: absolute;
   width: 80%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -25%);
   color: #fff;
   text-align: center;
   z-index: 2;
 }
 .main-visual-text h1 {
-  font-family: Presentation;
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-family: Paperozi;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
   font-weight: 900;
   line-height: 1.15;
 }
-.main-visual-text h1 em {
-  color: transparent;               /* 내부를 투명하게 */
-  -webkit-text-stroke: 2px #fff;    /* 글자 테두리(윤곽선) 흰색 */
-}
-.main-visual-text h1 span {
-  color: transparent;               /* 내부를 투명하게 */
-  -webkit-text-stroke: 2px #fff;    /* 글자 테두리(윤곽선) 흰색 */
-  font-size: clamp(3.5rem, 4.5vw, 5.5rem);
-}
 .main-visual-text h2 {
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-family: Paperozi;
+  font-weight: 300;
+  margin-top: 1vw;
+}
+.main-visual-text h3 {
+  font-size: clamp(5rem, 6vw, 6rem);
+  font-family: Paperozi;
+  font-weight: 100;
+  line-height: 1;
+  margin-top: 5vw;
 }
 .main-visual-text p {
-  margin-top: 10rem;
+  margin-top: 1.5vw;
   font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: 800;
+  font-size: .8rem;
 }
 
 section {

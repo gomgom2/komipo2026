@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  --nav-gap: 3.5rem; /* 메뉴 간 간격 (적당히 여유 있게) */
+  --nav-gap: 4.5rem; /* 메뉴 간 간격 (적당히 여유 있게) */
   --header-shadow: 0 6px 20px rgba(0,0,0,0.08); /* 살짝만 보이는 섀도우 */
 }
 
@@ -56,7 +56,7 @@ body.dark-hero .site-header {
   box-shadow: var(--header-shadow) !important;  /* ← here */
 }
 .site-header.scrolled .logo a {
-  background-image: url("../images/logo-color.png");
+  background-image: url("../images/logo-black.png");
 }
 .site-header.scrolled  .right-button a {
   border-color: #666;
@@ -83,9 +83,9 @@ body.dark-hero .site-header {
 
 .logo a {
   display: block;
-  width: 158px;        /* 기본 로고 크기 */
-  height: 24px;
-  background-image: url("../images/logo-color.png");
+  width: 88px;        /* 기본 로고 크기 */
+  height: 48px;
+  background-image: url("../images/logo-black.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
@@ -107,7 +107,7 @@ body.dark-hero .site-header:hover {
 
 /* 로고 이미지도 검정 버전으로 변경 */
 body.dark-hero .site-header:hover .logo a {
-  background-image: url("../images/logo-color.png");
+  background-image: url("../images/logo-black.png");
 }
 
 /* 오른쪽 버튼(지난호보기, PDF보기)도 검정색 테두리/글자로 변경 */
@@ -138,7 +138,8 @@ body.dark-hero .site-header:hover .right-button a {
 
 .menu > li > button {
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 900;
   line-height: 1.2;
   background: none;
   border: 0;
@@ -164,8 +165,8 @@ body.dark-hero .site-header:hover .right-button a {
 .right-button a {
   border: 1px solid #666;
   color: #666;
-  font-size: 0.9rem;
-  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
 }
 .dark-hero .right-button a {
   border-color: #d7d7d7;
@@ -225,7 +226,8 @@ ul.submenu {
 
 .submenu a {
   display: block;
-  font-size: .95rem;
+  font-size: .8rem;
+  font-weight: 800;
   color: #333;
   padding: 3px 0;
 }
