@@ -312,7 +312,7 @@ footer {
   align-items: center;
 }
 .footer .logo figure {
-  width: clamp(10rem, 15vw, 20rem);
+  width: clamp(6rem, 10vw, 10rem);
   margin-bottom: 1vw;
 }
 .footer p {
