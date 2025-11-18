@@ -133,6 +133,10 @@
 	border: 1px solid #e5e5e5;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 	margin-bottom: 0.5rem;
+	transition: opacity 0.1s ease;
+}
+.icon-box li figure:hover {
+	opacity: .5;
 }
 .prologue {
 	margin: 7rem auto;
@@ -250,7 +254,13 @@
 	border: 1px solid #e5e5e5;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 	margin-bottom: 0.5rem;
+	cursor: pointer;
+	transition: opacity 0.1s ease;
 }
+.icon-box-up figure:hover {
+	opacity: .5;
+}
+
 @media (max-width: 768px) {
 	
 }
