@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol id="ico-arrow-right" viewBox="0 0 30 24">
-  <path d="M2 12h22M18 6l6 6-6 6"
+  <path class="arrow"
+        d="M2 12h22M18 6l6 6-6 6"
         stroke="currentColor" 
         fill="none" />
 </symbol>

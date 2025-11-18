@@ -154,10 +154,11 @@ section h2 {
 }
 .icon-arrow {
   color: #fff;
-  stroke-width: 1.5px;
   width: 2rem;
+  aspect-ratio: 5 / 4;
 }
-.icon-arrow path {
+.icon-arrow .arrow {
+  stroke-width: 1.5px;
   stroke-linecap: butt;
   stroke-linejoin: miter;
 }
