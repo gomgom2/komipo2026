@@ -112,6 +112,28 @@
 	position: relative;
 	padding-bottom: 10rem;
 }
+.icon-box {
+	position: absolute;
+	right: -1rem;
+	top: 10rem;
+}
+.icon-box li {
+	width: 3vw;
+	list-style: none;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+.icon-box li figure {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background-color: #fff;
+	padding: 30%;
+	border-radius: 50%;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+	margin-bottom: 0.5rem;
+}
 .prologue {
 	margin: 7rem auto;
 	width: 50%;
@@ -179,6 +201,7 @@
 .article-box {
 	width: var(--width-1);
 	margin: 0 auto;
+	position: relative;
 }
 .article-box figure {
 	width: 25%;
@@ -210,6 +233,23 @@
 	font-size: 1.35rem;
 	margin-top: 3rem;
 	line-height: 1.7;
+}
+.icon-box-up {
+	width: 3vw;
+	position: absolute;
+	right: -8rem;
+	top: 50%;
+	transform: translateY(-30%);
+}
+.icon-box-up figure {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background-color: #fff;
+	padding: 30%;
+	border-radius: 50%;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+	margin-bottom: 0.5rem;
 }
 @media (max-width: 768px) {
 	
