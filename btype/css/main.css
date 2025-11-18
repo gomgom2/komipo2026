@@ -161,6 +161,10 @@ section h2 {
   background-size: contain;
   display: block;
   color: #fff; /* currentColor 적용 */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
 }
 .box-arrow {
   width: 3rem;
