@@ -155,6 +155,7 @@ section h2 {
 .icon-arrow {
   color: #fff;
   stroke-width: 1.5px;
+  width: 2rem;
 }
 .icon-arrow path {
   stroke-linecap: butt;
