@@ -138,6 +138,10 @@ section h2 {
   margin-bottom: 2rem;
   font-weight: 700;
 }
+.box-container figure {
+  position: relative;
+  z-index: 1;
+}
 .box-1 .box-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -156,11 +160,11 @@ section h2 {
   content: "";
   width: 2rem;
   aspect-ratio: 30 / 24; /* SVG와 동일한 비율 */
-  background-image: url('../images/icon-arrow-right.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  color: #fff; /* currentColor 적용 */
+  -webkit-mask-image: url('../images/icon-arrow-right.svg');
+  mask-image: url('../images/icon-arrow-right.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-color: #fff; /* 여기서 자유롭게 색 조절 가능 */
   position: absolute;
   top: 1rem;
   right: 1rem;
