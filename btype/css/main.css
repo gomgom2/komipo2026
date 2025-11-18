@@ -152,9 +152,25 @@ section h2 {
   position: relative;
   z-index: 1;
 }
+.box-1 .box-container .box-in::after {
+  content: "";
+  width: 2rem;
+  aspect-ratio: 30 / 24; /* SVG와 동일한 비율 */
+  background-image: url('../images/icon-arrow-right.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  color: #fff; /* currentColor 적용 */
+}
+.box-arrow {
+  width: 3rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
 .icon-arrow {
   color: #fff;
-  width: 2rem;
+  width: 100%;
   aspect-ratio: 5 / 4;
 }
 .icon-arrow .arrow {
