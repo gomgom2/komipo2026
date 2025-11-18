@@ -2,8 +2,6 @@
   <symbol id="ico-arrow-right" viewBox="0 0 30 24">
   <path d="M2 12h22M18 6l6 6-6 6"
         stroke="currentColor" 
-        stroke-width="1.5"
-        fill="none" stroke-linecap="butt"
-        stroke-linejoin="miter"/>
+        fill="none" />
 </symbol>
 </svg>

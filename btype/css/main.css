@@ -154,6 +154,11 @@ section h2 {
 }
 .box-arrow {
   color: #fff;
+  stroke-width: 1.5px;
+}
+.box-arrow path {
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
 }
 
 
