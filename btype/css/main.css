@@ -120,7 +120,7 @@
 .main-visual-text p {
   margin-top: 0;
   margin-bottom: clamp(0.8rem, 1vw, 1.2rem);
-  margin-right: 15%;
+  margin-right: 11%;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   font-weight: 800;
   text-align: right;
