@@ -102,7 +102,7 @@
   font-size: clamp(6rem, 11.8vw, 20rem);
   font-weight: 900;
   line-height: 1;
-  word-spacing: 4.5vw;
+  word-spacing: 4.8vw;
 }
 .main-visual-text h2 {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
@@ -118,7 +118,7 @@
   margin-top: clamp(9rem, 10vw, 10rem);
 }
 .main-visual-text p {
-  margin-top: clamp(0.8rem, 1vw, 1.2rem);
+  margin-top: 0;
   margin-bottom: clamp(0.8rem, 1vw, 1.2rem);
   margin-right: 15%;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
