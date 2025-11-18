@@ -152,11 +152,11 @@ section h2 {
   position: relative;
   z-index: 1;
 }
-.box-arrow {
+.icon-arrow {
   color: #fff;
   stroke-width: 1.5px;
 }
-.box-arrow path {
+.icon-arrow path {
   stroke-linecap: butt;
   stroke-linejoin: miter;
 }
