@@ -63,23 +63,23 @@
 /* 기본 숨김 상태 */
 .main-top-p {
   opacity: 0;
-  transform: translateY(40px); /* 처음에 아래쪽 */
-  animation: popUp 1.1s ease-out forwards;
+  transform: translateX(-400px); /* 처음에 아래쪽 */
+  animation: popUp 1.5s ease-out forwards;
 }
 
 /* 등장 모션 */
 @keyframes popUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateX(-400px);
   }
-  30% {
+  20% {
     opacity: 1;
-    transform: translateY(-20px); /* 위로 올라오고 */
+    transform: translateX(20px); /* 위로 올라오고 */
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* 살짝 내려와서 고정 */
+    transform: translateX(0); /* 살짝 내려와서 고정 */
   }
 }
 
