@@ -3,6 +3,8 @@
 :root {
 	--color-1: #709CAC;
 	--width-1: 70%;
+	--border-base: 1px solid #000;
+	--border-bold: 3px solid #000;
 }
 .article {
 	width: 100%;
@@ -245,6 +247,58 @@
 	font-size: 1.35rem;
 	margin-top: 3rem;
 	line-height: 1.7;
+}
+.event-box {
+	width: 800px;
+	margin: 5rem auto 0;
+}
+.event-choice {
+	background-color: #000;
+	display: flex;
+	gap: 3px;
+	border: var(--border-bold);
+}
+.event-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;            /* 높이 조절 */
+  box-sizing: border-box;
+  border-right: var(--border-bold);
+}
+/* 좌우 세로줄 영역 */
+.event-stripes {
+  flex: 1;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to right,
+    #000 0px,
+    #000 3px,   /* 줄 두께 */
+    #fff 2px,
+    #fff 10px    /* 줄 간격 */
+  );
+}
+/* 가운데 텍스트 박스 */
+.event-label {
+  padding: .5rem 5rem;
+  font-family: Presentation;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: .02rem;
+  text-align: center;
+}
+.event-text {
+	border: var(--border-bold);
+	padding: 5rem 10rem;
+}
+.event-bottom {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	font-family: Presentation;
+	padding: 1.5rem 0;
 }
 .icon-box-up {
 	width: 3vw;

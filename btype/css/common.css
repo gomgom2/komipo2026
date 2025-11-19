@@ -39,6 +39,7 @@ body:not(.dark-hero) .site-header {
   background: #fff;
   color: #111;
   box-shadow: none;
+  border-bottom: 1px solid #111;
 }
 
 /* 다크히어로 페이지: 투명 배경 + 살짝 섀도우 표시 */
@@ -185,6 +186,7 @@ body.dark-hero .site-header:hover .right-button a {
   transition: height .28s ease;
   z-index: 2;
   pointer-events: none;
+  border-bottom: 1px solid #111;
 }
 .site-header.mega-open::after {
   height: 260px;

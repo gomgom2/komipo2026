@@ -209,7 +209,6 @@
     font-weight: 400;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'GyeonggiMillenniumBackground';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Bold.woff') format('woff');
@@ -219,6 +218,12 @@
 @font-face {
     font-family: 'KccEunyeong';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'IncheonEducation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
 }
