@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -235,129 +237,217 @@
       </div>
     </section>
 
-    <!-- <section class="box-3">
-      <h2>KOMIPO’s Hands</h2>
-      <div class="box-container">
-        <div class="box-in box3-1">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_1.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>KOMIPO’s Item</h4>
-              <h3>인천발전본부,<br>AI기반 고장진단 플랫폼</h3>
-            </div>
-          </a>
-        </div>
-        <div class="box-in box3-2">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_2.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>Inside KOMIPO 1</h4>
-              <h3>A보령 정월대보름<br>노사 어울림 한마당</h3>
-            </div>
-          </a>
-        </div>
-        <div class="box-in box3-3">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_3.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>Inside KOMIPO 2</h4>
-              <h3>일렉스 코리아<br>2026</h3>
-            </div>
-          </a>
-        </div>
-        <div class="box-in box3-4">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_4.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>Global KOMIPO</h4>
-              <h3>The Golden Age of KOMIPO America<br>Begins Right Now!</h3>
-            </div>
-          </a>
-        </div>
-        <div class="box-in box3-5">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_5.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>KOMIPO One Crew</h4>
-              <h3>사회적협동조합 ‘온어스’<br>최낙원 이사장</h3>
-            </div>
-          </a>
-        </div>
-        <div class="box-in box3-5">
-          <a href="#">
-            <figure>
-              <img src="contents/main_box3_6.jpg">
-            </figure>
-            <div class="box-text">
-              <h4>KOMIPO News</h4>
-              <h3>KOMIPO News</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-     <section class="banner">
-      <div class="banner-container">
-        <div class="banner-in">
-          <figure>
-            <img src="contents/banner1.png">
-          </figure>
-        </div>
-        <div class="banner-in">
-          <a href="event.html">
-            <figure>
-              <img src="contents/banner2.png">
-            </figure>
-          </a>
-        </div>
-      </div>
-    </section> -->
-
-  </main>
-
-  <footer>
-    <div class="footer">
-      <div class="logo">
-        <figure>
-          <img src="images/logo-footer.png">
-        </figure>
-        <p>
-          충청남도 보령시 보령북로 160
-          <span>상호명 : 한국중부발전 (주)</span>
-          <span>사업자등록번호 : 120 - 86 - 19170</span>
-          <span>대표자명 : 이영조 </span>
-        </p>
-        <p>
-          <span>TEL : 070-7511-1123, 070-7511-1124</span>
-          <span>COPYRIGHT 2025 중부가족 웹진. ALL RIGHTS RESERVED.</span>
-        </p>
-      </div>
-      <div class="footer-icon">
-        <figure>
-          <img src="images/icon-yt.png">
-        </figure>
-        <figure>
-          <img src="images/icon-insta.png">
-        </figure>
-        <figure>
-          <img src="images/icon-fb.png">
-        </figure>
+<section class="box-2">
+  <div class="slider-section">
+    <div class="slider-header">
+      <h2>Kick & Hands.</h2>
+      <div class="slider-buttons">
+        <button class="btn-prev">←</button>
+        <button class="btn-next">→</button>
       </div>
     </div>
-  </footer>
+
+    <div class="slider-container" id="slider-1">
+      <div class="slide">슬라이드1</div>
+      <div class="slide">슬라이드2</div>
+      <div class="slide">슬라이드3</div>
+      <div class="slide">슬라이드4</div>
+    </div>
+  </div>
+</section>
+
+<section class="box-2">
+  <div class="slider-section">
+    <div class="slider-header">
+      <h2>Kick & Hands.</h2>
+      <div class="slider-buttons">
+        <button class="btn-prev-2">←</button>
+        <button class="btn-next-2">→</button>
+      </div>
+    </div>
+
+    <div class="slider-container" id="slider-2">
+      <div class="slide">슬라이드1</div>
+      <div class="slide">슬라이드2</div>
+      <div class="slide">슬라이드3</div>
+      <div class="slide">슬라이드4</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // 공통 슬라이더 생성 함수
+  function createSlider({ sliderSelector, prevSelector, nextSelector }) {
+    const slider = document.querySelector(sliderSelector);
+    if (!slider) return;
+
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    if (!slides.length) return;
+
+    const btnPrev = document.querySelector(prevSelector);
+    const btnNext = document.querySelector(nextSelector);
+
+    let currentIndex = 0;
+    let isPointerDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let visibleCount = getVisibleCount(); // 현재 화면에서 보이는 카드 개수(3.2, 2.2, 1.4 등)
+
+    // 화면 크기에 따라 보이는 카드 개수 계산 (CSS media query와 맞춰줌)
+    function getVisibleCount() {
+      const w = window.innerWidth;
+      if (w <= 600) return 1.2;     // 모바일
+      if (w <= 1024) return 2.2;    // 태블릿
+      return 3.2;                   // 데스크탑
+    }
+
+    // 카드 하나 간격(시작점 기준 거리)
+    function getStep() {
+      if (slides.length < 2) return slider.clientWidth;
+      const first = slides[0].offsetLeft;
+      const second = slides[1].offsetLeft;
+      return second - first;
+    }
+
+    // index 번째 카드를 기준으로 슬라이드 이동
+    function goTo(index, smooth = true) {
+      const step = getStep();
+      if (!step) return;
+
+      // 완전히 꽉 보이는 카드 개수 기준으로 최대 인덱스 계산
+      const clampCount = Math.max(1, Math.floor(visibleCount)); // 3.2 → 3, 2.2 → 2 ...
+      const maxIndex = Math.max(0, slides.length - clampCount);
+
+      currentIndex = Math.min(Math.max(index, 0), maxIndex);
+
+      const targetLeft = currentIndex * step;
+
+      slider.scrollTo({
+        left: targetLeft,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    }
+
+    // ▶ 버튼 이벤트
+    if (btnNext) {
+      btnNext.addEventListener('click', function () {
+        goTo(currentIndex + 1);
+      });
+    }
+    if (btnPrev) {
+      btnPrev.addEventListener('click', function () {
+        goTo(currentIndex - 1);
+      });
+    }
+
+    // ▶ 드래그 / 스와이프 (마우스 + 터치 공통 pointer 이벤트)
+    slider.addEventListener('pointerdown', function (e) {
+      isPointerDown = true;
+      startX = e.clientX;
+      startScrollLeft = slider.scrollLeft;
+      slider.setPointerCapture(e.pointerId);
+    });
+
+    slider.addEventListener('pointermove', function (e) {
+      if (!isPointerDown) return;
+      const dx = e.clientX - startX;
+      slider.scrollLeft = startScrollLeft - dx;
+    });
+
+    function endDrag(e) {
+      if (!isPointerDown) return;
+      isPointerDown = false;
+
+      const step = getStep();
+      if (!step) return;
+
+      const rawIndex = Math.round(slider.scrollLeft / step);
+      goTo(rawIndex);
+    }
+
+    slider.addEventListener('pointerup', endDrag);
+    slider.addEventListener('pointercancel', endDrag);
+    slider.addEventListener('pointerleave', endDrag);
+
+    // ▶ 리사이즈 대응 (태블릿/모바일 전환 시 위치 재계산)
+    window.addEventListener('resize', function () {
+      visibleCount = getVisibleCount();
+      goTo(currentIndex, false); // 현재 인덱스 기준으로 다시 맞춰주기
+    });
+
+    // 초기 위치
+    goTo(0, false);
+  }
+
+  // 슬라이더 2개 생성
+  document.addEventListener('DOMContentLoaded', function () {
+    createSlider({
+      sliderSelector: '#slider-1',
+      prevSelector: '.btn-prev',
+      nextSelector: '.btn-next'
+    });
+
+    createSlider({
+      sliderSelector: '#slider-2',
+      prevSelector: '.btn-prev-2',
+      nextSelector: '.btn-next-2'
+    });
+  });
+</script>
+        
+
+        <!-- <section class="banner">
+          <div class="banner-container">
+            <div class="banner-in">
+              <figure>
+                <img src="contents/banner1.png">
+              </figure>
+            </div>
+            <div class="banner-in">
+              <a href="event.html">
+                <figure>
+                  <img src="contents/banner2.png">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </section> -->
+
+      </main>
+
+      <footer>
+        <div class="footer">
+          <div class="logo">
+            <figure>
+              <img src="images/logo-footer.png">
+            </figure>
+            <p>
+              충청남도 보령시 보령북로 160
+              <span>상호명 : 한국중부발전 (주)</span>
+              <span>사업자등록번호 : 120 - 86 - 19170</span>
+              <span>대표자명 : 이영조 </span>
+            </p>
+            <p>
+              <span>TEL : 070-7511-1123, 070-7511-1124</span>
+              <span>COPYRIGHT 2025 중부가족 웹진. ALL RIGHTS RESERVED.</span>
+            </p>
+          </div>
+          <div class="footer-icon">
+            <figure>
+              <img src="images/icon-yt.png">
+            </figure>
+            <figure>
+              <img src="images/icon-insta.png">
+            </figure>
+            <figure>
+              <img src="images/icon-fb.png">
+            </figure>
+          </div>
+        </div>
+      </footer>
 
 
-  <script src="js/nav.js"></script>
+      <script src="js/nav.js"></script>
+
 </body>
 </html>

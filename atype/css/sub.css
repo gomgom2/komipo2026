@@ -147,12 +147,13 @@
 }
 .prologue {
 	margin: 0 auto 7rem;
-	width: 50%;
+	width: 52%;
 	color: var(--color-1);
 	font-weight: 700;
 	font-size: 1.5rem;
 	line-height: 1.6;
 	text-align: right;
+	word-break: keep-all;
 }
 .article-image {
 	width: var(--width-1);
