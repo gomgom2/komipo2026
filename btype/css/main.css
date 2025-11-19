@@ -20,7 +20,8 @@
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  background: linear-gradient(to bottom, #000 0%, #444 100%);
+  /*background: linear-gradient(to bottom, #000 0%, #444 100%);*/
+  background-color: #000;
 }
 .main-visual-bg figure {
   position: absolute;
