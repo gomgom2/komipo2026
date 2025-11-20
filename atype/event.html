@@ -168,14 +168,28 @@
         <div class="event-box">
           <div class="event-choice">
             <div class="event-image">
-              <figure>
-                <img src="contents/event_1.png">
-              </figure>
+              <div class="front">
+                <figure>
+                  <img src="contents/event_1.png">
+                </figure>
+              </div>
+              <div class="back">
+                <p>
+                  매일 10시간 운동하기<br>선택하셨습니다
+                </p>
+              </div>
             </div>
             <div class="event-image">
-              <figure>
-                <img src="contents/event_2.png">
-              </figure>
+              <div class="front">
+                <figure>
+                  <img src="contents/event_2.png">
+                </figure>
+              </div>
+              <div class="back">
+                <p>
+                  매일 10개 닭가슴살 먹기<br>선택하셨습니다
+                </p>
+              </div>
             </div>
           </div>
           <div class="event-title">
@@ -228,6 +242,13 @@
   </footer>
 
 
-  <script src="js/nav.js"></script>
+<script src="js/nav.js"></script>
+<script>
+  document.querySelectorAll('.event-image').forEach((item) => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('flipped');
+    });
+  });
+</script>
 </body>
 </html>

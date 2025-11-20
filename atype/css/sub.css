@@ -5,6 +5,7 @@
 	--width-1: 70%;
 	--border-base: 1px solid #000;
 	--border-bold: 3px solid #000;
+	--grid-gap: 1.2vw;
 }
 .article {
 	width: 100%;
@@ -147,22 +148,13 @@
 .icon-box li figure:hover {
 	opacity: .5;
 }
-.prologue {
-	margin: 0 auto 7rem;
-	width: 52%;
-	color: var(--color-1);
-	font-weight: 700;
-	font-size: 1.5rem;
-	line-height: 1.6;
-	text-align: right;
-	word-break: keep-all;
-}
 .article-image {
 	width: var(--width-1);
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
-	margin-bottom: 8rem;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 .article-image figure {
 	width: 100%;
@@ -185,6 +177,8 @@
 .article-image span.black {
 	background-color: #000;
 	color: #fff;
+}
+.article-image span.z-3 {
 	z-index: 3;
 }
 .tag-1 {
@@ -199,14 +193,43 @@
 	bottom: -1.7rem;
 	right: -2rem;
 }
-.article-q, .article-a {
+.tag-4 {
+	left: -4rem;
+	top: 25%;
+}
+.tag-5 {
+	left: 4rem;
+	bottom: 3.2rem;
+}
+.tag-6 {
+	top: 43%;
+	right: 5rem;
+}
+.tag-7 {
+	top: 52%;
+	right: -2rem;
+}
+.article-body p,
+.article-body h5 {
 	width: var(--width-1);
 	margin: 0 auto 2.5rem;
-	font-size: 1.5rem;
+	/*font-size: 1.5rem;*/
+	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 1.7;
+	word-break: keep-all;
 }
-.article-q {
+.article-body p.prologue {
+	margin: 0 auto 7rem;
+	width: 52%;
+	color: var(--color-1);
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	text-align: right;
+	word-break: keep-all;
+}
+.article-body h5 {
 	color: var(--color-1);
 	text-decoration: underline;
 	text-decoration-thickness: 0.01rem;
@@ -219,7 +242,7 @@
 }
 .article-box figure {
 	width: 25%;
-	margin: 15rem auto 3rem;
+	margin: 7rem auto 2rem;
 }
 .article-box-text {
 	border-left: 0.01rem solid #000;
@@ -258,6 +281,63 @@
 	gap: 3px;
 	border: var(--border-bold);
 }
+.event-image {
+  width: 100%;   /* 필요에 따라 조정 */
+  aspect-ratio: 900 / 1345;  /* 필요에 따라 조정 */
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.event-image .front,
+.event-image .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 앞면 */
+.event-image .front figure,
+.event-image .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 뒷면 */
+.event-image .back {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+/* 카드 전체 회전 효과 컨트롤 */
+.event-image {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+/* hover 시 약하게 기울기 */
+.event-image:hover {
+  transform: rotateY(30deg);
+}
+
+/* 클릭 시 완전 flip */
+.event-image.flipped {
+  transform: rotateY(180deg);
+}
 .event-title {
   display: flex;
   align-items: center;
@@ -287,12 +367,15 @@
   letter-spacing: .02rem;
   text-align: center;
 }
+
 .event-text {
 	border: var(--border-bold);
 	padding: 5rem 10rem;
 }
 .event-bottom {
 	background-color: #000;
+}
+.event-bottom p {
 	color: #fff;
 	text-align: center;
 	font-size: 1.5rem;
@@ -321,6 +404,94 @@
 }
 .icon-box-up figure:hover {
 	opacity: .5;
+}
+
+.article-rel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+    margin-top: 7rem;
+}
+.box-in {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.box-in a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.box-in figure {
+  overflow: hidden;
+}
+.box-in figure img {
+  transition: all 0.3s ease 0s;
+}
+.box-in:hover {
+  border-radius: 0;
+}
+.box-in:hover figure img {
+  transform: scale(1.3);
+}
+.box-in {
+  aspect-ratio: 1 / 1.4;
+}
+.box-in::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.3;
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+.box-in:hover::after {
+  opacity: 0;
+}
+.box-in a {
+  height: auto;
+}
+.box-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  z-index: 2;
+  padding: clamp(1.8rem, 2.2vw, 2.2rem) clamp(1.5rem, 2vw, 2rem);
+}
+.box-text h4 {
+  font-weight: 800;
+  font-size: clamp(0.6rem, 0.8vw, 0.8rem);
+  line-height: 1.5;
+  border-radius: clamp(0.9rem, 0.9vw, 2rem);
+  letter-spacing: -.02rem;
+  background: #fff;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.1rem 0.8rem;
+}
+.box-text h3 {
+  line-height: 1.3;
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  letter-spacing: -.02rem;
+  margin-bottom: 0.8rem;
+  font-weight: 800;
+}
+.box-tag {
+  width: 80%;
+}
+.box-tag span {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  padding: 0.1rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: 0.9rem;
+  margin-right: 0.1rem;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
