@@ -161,6 +161,7 @@ section h2 {
 .share-icon.fb { background-image: url(../images/icon_share_fb.png); }
 .share-icon.insta { background-image: url(../images/icon_share_insta.png); }
 .share-icon.x { background-image: url(../images/icon_share_x.png); }
+.share-icon.blog { background-image: url(../images/icon_share_blog.png); }
 
 .box-container {
   display: grid;
@@ -341,7 +342,9 @@ section h2 {
 .box-2 .box-in.box-2-6 { --box-bg-current: var(--box-bg-2-6); --box-text-current: var(--box-text-2-6); --box-text2-current: var(--box-text2-2-6); --box-fs-current: var(--box-fs-2-6); }
 
 .box-3 .box-in {
-  border: 1px solid #eee;
+  border: 1px solid #B6BDCD;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .box-3 .box-in:hover {
   border-color: rgb(235, 224, 221);
@@ -378,7 +381,11 @@ section h2 {
   grid-template-columns: 1fr 1fr;
   gap: var(--grid-gap);
 }
-
+.banner-in {
+  border: 1px solid #B6BDCD;
+  border-radius: 1rem;
+  overflow: hidden;
+}
 @media (max-width: 768px) {
   :root {
     --grid-gap: 2rem;
