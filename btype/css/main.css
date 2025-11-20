@@ -150,9 +150,31 @@
   }
 }
 
+.box-1 {
+  position: relative;
+}
+.song-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.song {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: clamp(8rem, 10vw, 12rem);
+  transform: translateX(25%) translateY(-80%);
+  z-index: 10;
+}
+@media (max-width: 1700px) {
+  .song {
+    transform: translateX(0) translateY(-80%);
+  }
+}
 .box-1 .box-container {
   margin: 0 auto;
   max-width: var(--max-width);
+  position: relative;
 }
 .box-1 .box-container {
   display: grid;
