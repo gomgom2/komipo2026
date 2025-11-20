@@ -34,7 +34,8 @@
   --box3-bg-5: #000;
 }
 .main-visual {
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   height: 100vh;
   position: relative;
 }
@@ -118,11 +119,6 @@ section h2 {
   transform: translateX(-30%) translateY(-15%);
   z-index: 10;
 }
-@media (max-width: 1700px) {
-  .song {
-    transform: translateX(0) translateY(-10%);
-  }
-}
 .share {
   position: absolute;
   top: 15rem;
@@ -162,6 +158,16 @@ section h2 {
 .share-icon.insta { background-image: url(../images/icon_share_insta.png); }
 .share-icon.x { background-image: url(../images/icon_share_x.png); }
 .share-icon.blog { background-image: url(../images/icon_share_blog.png); }
+
+@media (max-width: 1850px) {
+  .share {
+    display: none;
+  }
+}
+
+
+
+
 
 .box-container {
   display: grid;
