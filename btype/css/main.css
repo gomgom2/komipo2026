@@ -490,6 +490,7 @@ span.share-icon:hover {
 @media (max-width: 768px) {
   :root {
     --box-1-gap: 2vw;
+    --slide-gap: 2vw;
   }
 
   html, body {
@@ -552,6 +553,30 @@ span.share-icon:hover {
     padding: 0 2vw;
     grid-template-columns: 1fr;
     aspect-ratio: auto;
+  }
+  .box-1 h3 {
+    font-size: clamp(1rem, 6vw, 1.8rem);
+    left: 1rem;
+    width: 80%;
+  }
+  .box-1-solo h3 {
+    width: 50%;
+  }
+
+  .box-2 .slider-header {
+    padding: 0 var(--box-1-gap);
+  }
+  .box-2 h2 {
+    font-size: 2.5rem;
+  }
+  .slider-container {
+    padding: 0 var(--box-1-gap);
+  }
+
+  .banner-container {
+    grid-template-columns: 1fr;
+    padding: 0 var(--box-1-gap);
+    margin: 5rem 0;
   }
 
 
