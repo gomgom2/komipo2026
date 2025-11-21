@@ -85,16 +85,3 @@ body {
 	color: var(--basic-text-color);
 	background: var(--basic-bg-color);
 }
-
-/* 다크 모드 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --basic-bg-color: #0b0c10;
-    --basic-text-color: #e8ebf0;
-    --basic-border-color: #1d2230;
-  }
-}
-/* 움직임 줄이기, 애니메이션 효과 표시 안 함 */
-@media (prefers-reduced-motion: reduce) {
-* { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-}
