@@ -383,4 +383,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
+  .footer .logo span {
+    display: block;
+  }
 }
