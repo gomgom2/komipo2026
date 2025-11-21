@@ -74,13 +74,13 @@ body.dark-hero .site-header {
   min-height: 64px;
 }
 
-.logo a {
+.nav-wrap .logo a {
   font-size: 1.25rem;
   font-weight: 800;
   white-space: nowrap;
 }
 
-.logo a {
+.nav-wrap .logo a {
   display: block;
   width: 164px;        /* 기본 로고 크기 */
   height: 48px;
@@ -333,7 +333,7 @@ footer {
     justify-content: space-between;
     padding: 1.1rem;
   }
-  .logo a {
+  .nav-wrap .logo a {
     width: 137px;
     height: 40px;
   }
@@ -359,5 +359,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .footer .logo span {
+    display: block;
   }
 }
