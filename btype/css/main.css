@@ -153,24 +153,8 @@
 .box-1 {
   position: relative;
 }
-.song-container {
-  position: relative;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-.song {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: clamp(8rem, 10vw, 12rem);
-  transform: translateX(25%) translateY(-80%);
-  z-index: 10;
-}
-@media (max-width: 1700px) {
-  .song {
-    transform: translateX(0) translateY(-80%);
-  }
-}
+
+
 .box-1 .box-container {
   margin: 0 auto;
   max-width: var(--max-width);
@@ -434,4 +418,141 @@ section.box-2 {
 }
 .banner-in {
   border: 2px solid #000;
+}
+
+.song-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.song {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: clamp(8rem, 10vw, 12rem);
+  transform: translateX(25%) translateY(-80%);
+  z-index: 10;
+}
+@media (max-width: 1700px) {
+  .song {
+    transform: translateX(0) translateY(-80%);
+  }
+}
+.share {
+  position: absolute;
+  top: 10rem;
+  right: -6rem;
+  width: 60px;
+  background-color: #828282;
+  padding: 20px 10px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.share li {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  padding: 10px 0;
+}
+.share li:first-child {
+  border-top: none;
+}
+.share li:nth-last-child(1) {
+  border-bottom: none;
+}
+span.share-icon {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: url(../images/icon_share_home.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+span.share-icon:hover {
+  opacity: 1;
+}
+.share-icon.yt { background-image: url(../images/icon_share_yt.png); }
+.share-icon.fb { background-image: url(../images/icon_share_fb.png); }
+.share-icon.insta { background-image: url(../images/icon_share_insta.png); }
+.share-icon.x { background-image: url(../images/icon_share_x.png); }
+.share-icon.blog { background-image: url(../images/icon_share_blog.png); }
+
+@media (max-width: 1850px) {
+  .share {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --box-1-gap: 2vw;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+  .main-visual {
+    height: 40vh;
+    margin-bottom: 6rem;
+  }
+  .main-visual-text {
+    top: 50%;
+    bottom: auto;
+    transform: translateX(2.5%) translateY(-48%);
+  }
+  .main-visual-text h1 {
+    text-align: right;
+    font-size: 23vw  ;
+    /*word-spacing: 4.8vw;*/
+  }
+  .main-visual-text p {
+    margin: .3rem 5% 3rem 0;
+  }
+  .main-visual-bg figure {
+    width: 200%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+    z-index: 2;
+  }
+
+  .top-1 {
+    left: 60%;
+    width: 18vw;
+  }
+  .top-2 {
+    left: 48%;
+    width: 14vw;
+    bottom: -1vw;
+  }
+  .top-3 {
+    left: 30%;
+    width: 24vw;
+    bottom: -16vw;
+  }
+  .top-4 {
+    left: 16%;
+    width: 18vw;
+    bottom: -1vw;
+  }
+  .top-5 {
+    left: 8%;
+    width: 16vw;
+    bottom: -18vw;
+  }
+  .song {
+    width: 20vw;
+    transform: translateX(-20%) translateY(-90%);
+  }
+  .box-1 .box-container {
+    padding: 0 2vw;
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+
 }
