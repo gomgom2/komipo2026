@@ -448,6 +448,7 @@ function createSlider({ sliderSelector, prevSelector, nextSelector, paginationSe
   let startX = 0;
   let startScrollLeft = 0;
   let visibleCount = getVisibleCount();
+  let lastClientX = 0;   // ★ 추가: 마지막 터치 위치
 
   function getVisibleCount() {
     const w = window.innerWidth;
@@ -539,6 +540,7 @@ function createSlider({ sliderSelector, prevSelector, nextSelector, paginationSe
   slider.addEventListener('pointerdown', (e) => {
     isPointerDown = true;
     startX = e.clientX;
+    lastClientX = e.clientX;      // ★ 추가
     startScrollLeft = slider.scrollLeft;
     slider.setPointerCapture(e.pointerId);
   });
@@ -546,6 +548,7 @@ function createSlider({ sliderSelector, prevSelector, nextSelector, paginationSe
   slider.addEventListener('pointermove', (e) => {
     if (!isPointerDown) return;
     slider.scrollLeft = startScrollLeft - (e.clientX - startX);
+    lastClientX = e.clientX;      // ★ 추가
   });
 
   function endDrag() {
@@ -553,9 +556,25 @@ function createSlider({ sliderSelector, prevSelector, nextSelector, paginationSe
     isPointerDown = false;
 
     const step = getStep();
-    const rawIndex = Math.round(slider.scrollLeft / step);
 
-    goTo(rawIndex);
+    // 손가락이 움직인 거리 (오른쪽으로 스와이프하면 양수/음수는 상황에 따라 반대일 수 있음)
+    const deltaX = lastClientX - startX;
+
+    // 어느 정도 이상 움직이면 슬라이드 넘기기
+    const threshold = Math.min(80, step * 0.25); 
+    // → 최소 80px 정도, 혹은 슬라이드 폭의 1/4
+
+    if (Math.abs(deltaX) > threshold) {
+      // 왼쪽으로 쓸어 넘기면 다음 슬라이드, 오른쪽이면 이전 슬라이드
+      if (deltaX < 0) {
+        goTo(currentIndex + 1);
+      } else {
+        goTo(currentIndex - 1);
+      }
+    } else {
+      // 많이 안 움직였으면 원래 자리로 스냅
+      goTo(currentIndex);
+    }
   }
 
   slider.addEventListener('pointerup', endDrag);

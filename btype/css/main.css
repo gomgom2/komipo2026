@@ -287,6 +287,7 @@
   touch-action: pan-y;
   transition: transform 0.3s ease;
   will-change: transform;
+  touch-action: pan-y;
 }
 /* 카드 3개 정확히 보이도록: (전체 - 여백 2개) / 2.8 */
 .slider-container .slide {
