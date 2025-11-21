@@ -350,14 +350,15 @@ footer {
   }
   .hamburger {
     display: flex;
+    z-index: 1000;
   }
   .nav-wrap {
     justify-content: space-between;
     padding: 1rem;
   }
   .logo a {
-    width: 132px;
-    height: 20px;
+    width: 66px;
+    height: 36px;
   }
   .site-header.mega-open::after {
     height: 0;
