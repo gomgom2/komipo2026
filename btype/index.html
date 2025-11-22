@@ -559,7 +559,7 @@ function createSlider({ sliderSelector, prevSelector, nextSelector, paginationSe
     const deltaX = lastClientX - startX;
 
     // 어느 정도 이상 움직이면 슬라이드 넘기기
-    const threshold = Math.min(80, step * 0.25); 
+    const threshold = Math.min(60, step * 0.25); 
     // → 최소 80px 정도, 혹은 슬라이드 폭의 1/4
 
     if (Math.abs(deltaX) > threshold) {
